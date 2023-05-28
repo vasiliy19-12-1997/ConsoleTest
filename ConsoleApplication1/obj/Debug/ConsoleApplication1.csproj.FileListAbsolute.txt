@@ -1,0 +1,7 @@
+D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache
+D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.SuggestedBindingRedirects.cache
+D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
