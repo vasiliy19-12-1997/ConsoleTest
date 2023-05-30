@@ -5,3 +5,10 @@ D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\Co
 D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
 D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 D:\JOB\Course\backend\games\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\KVS\Documents\Василий\00_Programming\00_Work\backend\ConsoleTest\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\KVS\Documents\Василий\00_Programming\00_Work\backend\ConsoleTest\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\KVS\Documents\Василий\00_Programming\00_Work\backend\ConsoleTest\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache
+C:\Users\KVS\Documents\Василий\00_Programming\00_Work\backend\ConsoleTest\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.SuggestedBindingRedirects.cache
+C:\Users\KVS\Documents\Василий\00_Programming\00_Work\backend\ConsoleTest\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\KVS\Documents\Василий\00_Programming\00_Work\backend\ConsoleTest\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\KVS\Documents\Василий\00_Programming\00_Work\backend\ConsoleTest\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
