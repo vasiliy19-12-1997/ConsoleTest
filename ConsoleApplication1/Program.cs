@@ -69,6 +69,7 @@ namespace ConsoleApplication1
             Console.WriteLine(triggerInBoolean);
             int reconvert = Convert.ToInt32(triggerInBoolean);
             Console.WriteLine(reconvert);
+            
         }   
     }
 }
