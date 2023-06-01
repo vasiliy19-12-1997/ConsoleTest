@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Security.Policy;
 
 namespace ConsoleApplication1
 {
@@ -198,7 +196,9 @@ namespace ConsoleApplication1
             // {
             //     Console.WriteLine("block");
             // }
-
+            
+            
+            /*
             float rublesInWallet;
             float dollarsInWallet;
 
@@ -209,9 +209,189 @@ namespace ConsoleApplication1
             string desiredOperation;
             Console.WriteLine("Welcome в обменнк валют");
             Console.WriteLine("введите баланс рублей");
-            rublesInWallet = Convert.ToSingle(Console.ReadLine());
+            rublesInWallet = Convert.ToSingle(Console.ReadLine()); 
+            Console.WriteLine("введите баланс долларов");
+            dollarsInWallet = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Выберите неоходимую операцию");
+            Console.WriteLine("1 - Обменять рубли на доллары");
+            Console.WriteLine("2 - Обменять доллары на рубли");
+            Console.WriteLine("Ваш выбор");
+            desiredOperation = Console.ReadLine();
+            switch (desiredOperation)
+            {
+                case "1":
+                    Console.WriteLine("Обмен рублей на доллары");
+                    Console.WriteLine("Сколько вы хотите обменять");
+                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (rublesInWallet >= exchangeCurrencyCount)
+                    {
+                        rublesInWallet -= exchangeCurrencyCount;
+                        dollarsInWallet += exchangeCurrencyCount / rubToUsd;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во рублей");
+                    }
+                   break;
+                case "2":
+                    Console.WriteLine("Обмен долларов на рубли");
+                    Console.WriteLine("Сколько вы хотите обменять");
+                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (dollarsInWallet >= exchangeCurrencyCount)
+                    {
+                        dollarsInWallet -= exchangeCurrencyCount;
+                        rublesInWallet += exchangeCurrencyCount * usdToRub;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во долларов");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Выюрана неверная операция");
+                    break;
+            }
+
+            Console.WriteLine($"Ваш баланас {rublesInWallet} рублей  ${dollarsInWallet} долларов");
+        */
+
+            // int age;
+            // Console.WriteLine("enter your age");
+            // age = Convert.ToInt32(Console.ReadLine());
+            // while (age-- >0)
+            // {
+            //     if (age == 5)
+            //     {
+            //         continue;
+            //     }
+            //     Console.WriteLine(age);
+            // }
+            
+            // int age;
+            // Console.WriteLine("enter your age");
+            // age = Convert.ToInt32(Console.ReadLine());
+            // for (int i = 0; i <= age; i++)
+            // {
+            //     if (i % 2 != 0)
+            //     {
+            //         continue;
+            //     }
+            //     Console.WriteLine($"happy birthday {i}");
+            // }
+
+        
+            /*int tryCount =5;
+            string password = "127571";
+            string userInput;
+            for (int i = 0; i < tryCount; i++)
+            {
+                Console.WriteLine("Enter your password");
+                userInput = Console.ReadLine();
+                if (userInput == password)
+                {
+                    Console.WriteLine("secret");
+                break;
+                }
+                else
+                {
+                    Console.WriteLine("entered never password");
+                    Console.WriteLine($"У вас осталось {tryCount -i -1} попытки");
+                }
+            }*/
 
 
+            /*int playerHealth = 10;
+            int playerDemage = 10;
+            int enemyHealth = 10;
+            int enemyDemage = 10;
+
+            while (playerHealth > 0 && enemyHealth > 0)
+            {
+                playerHealth -= enemyDemage;
+                enemyHealth -= playerDemage;
+                Console.WriteLine($"здоровье игрока: {playerHealth}");
+                Console.WriteLine($"здоровье врага: {enemyHealth}");
+            }
+
+            if (playerHealth <= 0 && enemyHealth <= 0)
+            {
+                Console.WriteLine("ничья");
+            }else if (enemyHealth <= 0)
+            {
+                Console.WriteLine("победа игрока");
+            }else if (playerHealth <= 0)
+            {
+                Console.WriteLine("победа врага");
+            }
+            {
+                
+            }*/
+
+
+            // Random rand = new Random();
+            // for (int i = 0; i < 5; i++)
+            // {
+            //     Console.WriteLine(rand.Next(0,5));
+            // }
+
+            /*int number;
+            int lower, higher;
+            int triesCount = 5;
+            int userInput;
+            Random rand = new Random();
+
+            number = rand.Next(0, 101);
+            lower = rand.Next(number - 10, number);
+            higher = rand.Next(number + 1, number+10);
+            Console.WriteLine($"Мы загадали число от 0 до 100, оно больше чем {lower}, но меньше чем {higher} ");
+            Console.WriteLine($"У вас осталось {triesCount}");
+            while (triesCount -->0)
+            {
+                Console.WriteLine("Your answer:");
+                userInput = Convert.ToInt32(Console.ReadLine());
+                if (userInput == number)
+                {
+                    Console.WriteLine($"You are rigth it is a: {number}");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine($"error, вы неугадали число you have {triesCount} tries");
+                }
+
+            }
+
+            if (triesCount >= 0) return;
+            Console.WriteLine($" вы проиграли, это было число:{number}");*/
+            
+            
+            /*Random rand = new Random();
+            float health1  = rand.Next(90, 100);
+            int demage1= rand.Next(5, 20);
+            int armor1= rand.Next(25, 65);
+            float health2= rand.Next(80, 150);
+            int demage2= rand.Next(20, 40);
+            int armor2= rand.Next(65, 100);
+            Console.WriteLine($"Гладиатор1 - {health1} здоровья {demage1} наносимый урон {armor1} броня");
+            Console.WriteLine($"Гладиатор2 - {health2} здоровья {demage2} наносимый урон {armor2} броня");
+            while (health1 > 0 && health2 > 0)
+            {
+                health1 -= Convert.ToSingle(rand.Next(0, demage2 + 1))/100 * armor1;
+                health2 -= Convert.ToSingle(rand.Next(0, demage1 + 1))/100 * armor1;
+                Console.WriteLine($"здровье гладиатора1 {health1}");
+                Console.WriteLine($"здровье гладиатора2 {health2}");
+            }
+
+            if (health1 <= 0 && health2 <= 0)
+            {
+                Console.WriteLine("Ничья");
+            }else if (health2 <= 0)
+            {
+                Console.WriteLine("Гладиатор 2 проиграл");
+            }else if (health1 <= 0)
+            {
+                Console.WriteLine("Гладиатор 1 проиграл");
+            }*/
         }   
     }
 }
