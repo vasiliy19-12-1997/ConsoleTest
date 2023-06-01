@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization.Formatters;
 
 namespace ConsoleApplication1
 {
@@ -392,6 +393,54 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("Гладиатор 1 проиграл");
             }*/
+
+            // Хитрости работы с консолью
+            // Console.SetCursorPosition(5,10);
+            // Console.BackgroundColor = ConsoleColor.DarkBlue;
+            // Console.BackgroundColor = ConsoleColor.DarkGray;
+            // Console.Clear();
+            // Console.WindowHeight = 10;
+            // Console.WindowWidth = 35;
+            // Console.WriteLine("Hello, Vasya\nwhere were you been yeasterday\ni went to ...]\b \b");
+            // // Console.Clear();
+
+            // int[] apples = new int [10];
+            // int[] apples = {24,25,17,38,100, int.MaxValue, Int32.MinValue, };
+            // int[] apples = new int [4]{27,1,6,50};
+            // // Console.WriteLine(apples[0]);
+            // // Console.WriteLine(apples.Length);
+            // // Random rand = new Random();
+            //
+            // for (int i = 0; i < apples.Length; i++)
+            // {
+            //     // apples[i] = rand.Next(0,101);
+            //     Console.WriteLine(apples[i]);
+            // }
+
+
+            // int[] arr = { 100, 50, 300 };
+            // int sum = 0;
+            // for (int i = 0; i < arr.Length;i++)
+            // {
+            //     sum += arr[i];
+            // }
+            // Console.WriteLine(sum);
+
+            /*int[] arr = { 1, 50, 100, 55, 101, 12 };
+            int maxValue = int.MinValue;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (maxValue < arr[i])
+                {
+                    maxValue = arr[i];
+                }
+                
+            }
+            
+            Console.WriteLine(maxValue);*/
+
+            
+            
         }   
     }
 }
