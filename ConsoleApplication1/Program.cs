@@ -126,18 +126,91 @@ namespace ConsoleApplication1
             Console.WriteLine($"you have{food} and coins: {money}");
             */
 
-            string dayOfWeek;
+            
+            //&&
+            // int money = 500;
+            // int level = 500;
+            // if (money >= 500 || level > 9)
+            // {
+            //     Console.WriteLine("Welcome to our gild");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Goodbye");
+            // }
+            /*string dayOfWeek;
             Console.WriteLine("Enter day of week");
             dayOfWeek = Console.ReadLine();
-            if (dayOfWeek == "Понедельник")
+            switch (dayOfWeek)
             {
-                Console.WriteLine("Проходим курсы");
-            }
+                case "понедельник":
+                    Console.WriteLine("go to cinema");
+                    Console.WriteLine("eat popkorn");
+                    break;
+                case "вторник":
+                    Console.WriteLine("go to cinema");
+                    Console.WriteLine("eat popkorn");
+                    break;
+                case "среда":
+                    Console.WriteLine("изучаем switch");
+                    
+                    break;  
+                case "четверг":
+                    Console.WriteLine("go to cinema");
+                    Console.WriteLine("eat popkorn");
+                    break;  
+                case "пятница":
+                    Console.WriteLine("go to cinema");
+                    Console.WriteLine("eat popkorn");
+                    break;  
+                case "суббота":
+                case "воскресенье":
+                    Console.WriteLine("go to cinema");
+                    Console.WriteLine("eat popkorn");
+                    break;  
+                default:
+                    Console.WriteLine("Я такого дня не знаю");
+             break;
+            }*/
+            
+            
+            
+            
+            // if (dayOfWeek == "Понедельник")
+            // {
+            //     Console.WriteLine("Проходим курсы");
+            // }
+            //
+            // else if (dayOfWeek == "вторник")
+            // {
+            //     Console.WriteLine("Делаем дз");
+            // }
 
-            else if (dayOfWeek == "вторник")
-            {
-                Console.WriteLine("Делаем дз");
-            }
+            // string password = "So127571";
+            // string userInput;
+            // Console.WriteLine("Enter your password");
+            // userInput = Console.ReadLine();
+            // if (userInput == password)
+            // {
+            //     Console.WriteLine("access");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("block");
+            // }
+
+            float rublesInWallet;
+            float dollarsInWallet;
+
+            int rubToUsd = 64;
+            int usdToRub = 66;
+
+            float exchangeCurrencyCount;
+            string desiredOperation;
+            Console.WriteLine("Welcome в обменнк валют");
+            Console.WriteLine("введите баланс рублей");
+            rublesInWallet = Convert.ToSingle(Console.ReadLine());
+
 
         }   
     }
