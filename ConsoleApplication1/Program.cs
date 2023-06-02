@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
 
 namespace ConsoleApplication1
@@ -439,8 +440,60 @@ namespace ConsoleApplication1
             
             Console.WriteLine(maxValue);*/
 
-            
-            
+            int[] sectors = { 6, 28, 15, 15, 17 };
+            bool isOpen = true;
+            while (isOpen)
+            {
+                Console.SetCursorPosition(0, 18);
+                for (int i = 0; i < sectors.Length; i++)
+                {
+                    Console.WriteLine($"In sectror {i+1} свободно {sectors[i]} мест");
+                }
+                
+              
+                Console.SetCursorPosition(0,0);
+                Console.WriteLine("Регистрация рейса");
+                Console.WriteLine("\n\n1 - забронировать места\n\n2 - выход из программы\n\n");
+                Console.Write("Введите номер команды");
+                switch (Convert.ToInt32(Console.ReadLine()))
+                {
+                    case 1:
+                        int userSector, userPlaceAmount;
+                        Console.WriteLine("В каком секторе вы хотите лететь? ");
+                        userSector = Convert.ToInt32(Console.ReadLine())-1;
+                        if (sectors.Length <= userSector || userSector < 0)
+                        {
+                            Console.WriteLine("Такого сектора не существует");
+                        break;
+                        }
+                        Console.WriteLine("Сколько хотите мест забронировать? ");
+                        userPlaceAmount = Convert.ToInt32(Console.ReadLine());
+                        if (userPlaceAmount < 0)
+                        {
+                            Console.WriteLine("Неверное кол-во мест");
+                            break;
+                        }
+                        if (sectors[userSector] < userPlaceAmount)
+                        {
+                            Console.WriteLine($"В секторе {userSector} недостаточно мест, отсаток {sectors[userSector]}");
+                        break;
+                        }
+
+                        sectors[userSector] -= userPlaceAmount;
+                        Console.WriteLine($"Бронирование прошло успешно, ваш сектор:{userSector+1} кол-во мест: {userPlaceAmount}");
+                        break;
+                    
+                    case 2:
+                        isOpen = false;
+                        break;
+                }
+
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+
+
         }   
     }
 }
