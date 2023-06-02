@@ -440,7 +440,9 @@ namespace ConsoleApplication1
             
             Console.WriteLine(maxValue);*/
 
-            int[] sectors = { 6, 28, 15, 15, 17 };
+            
+            
+            /*int[] sectors = { 6, 28, 15, 15, 17 };
             bool isOpen = true;
             while (isOpen)
             {
@@ -490,10 +492,130 @@ namespace ConsoleApplication1
 
                 Console.ReadKey();
                 Console.Clear();
+            }*/
+
+            
+            
+            /*int[,] arr3 = new int[15, 25];
+            Random rand = new Random();
+            for (int i = 0; i < arr3.GetLength(0); i++)
+            {
+                
+                for (int j = 0; j < arr3.GetLength(1); j++)
+                {
+                    arr3[i,j] = rand.Next(0,10);
+                    Console.Write(arr3[i,j]+ " ");
+                }
+
+                Console.WriteLine();
+            }*/
+
+            
+            
+            
+            
+            /*// БИБЛИОТЕКА
+            string[,] books =
+            {
+                { "Александр Пушкин", "Михаил Лермонтов", "Сергей Есенин" },
+                { "Роберт Мартин", "Джесси Шелл", "Сергей Есенин" },
+                { "Стивен Кинг", "Говард Лавкрафт", "Брем Стокер" }, 
+            };
+            bool isOpen = true;
+            
+            while (isOpen)
+            {
+                Console.SetCursorPosition(0,20);
+                Console.WriteLine("Весь список авторов:\n");
+                for (int i = 0; i < books.GetLength(0); i++)
+                {
+                    for (int j = 0; j < books.GetLength(1); j++)
+                    {
+                        Console.Write(books[i,j]+ " | ");
+                    }
+
+                    Console.WriteLine();
+                }
+                Console.SetCursorPosition(0,0);
+                Console.WriteLine("Библиотека");
+                Console.WriteLine("\n1 - узнать имя автора по индексу книги.\n\n2 - найти книгу по автору.\n\n3 -выход");
+                Console.Write("\nВыберите пункт меню:");
+                switch (Convert.ToInt32(Console.ReadLine()))
+                {
+                    case 1:
+                        int line, column;
+                        Console.Write("Введите номер полки: ");
+                        line = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Введите номер столбца: ");
+                        column = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"Это автор {books[line-1, column-1]}");
+                        
+                            
+                        break;
+                    case 2:
+                        string author;
+                        bool authorIsFound = false;
+                        Console.Write("Введите автора: ");
+                        author = Console.ReadLine();
+                        for (int i = 0; i < books.GetLength(0); i++){
+                            for (int j = 0; j < books.GetLength(1); j++)
+                                if (author.ToLower() == books[i, j].ToLower())
+                                {
+                                    Console.Write($"автор {books[i, j]} находится по адресу полка:{i + 1}, место: { j + 1}");
+                                    authorIsFound = true;
+                                }
+                        }
+
+                        if (!authorIsFound)
+                        {
+                            Console.WriteLine("Такого автора нет");
+                        }
+                        break;
+                    case 3:
+                        isOpen = false;
+                        break;
+                    default:
+                        Console.WriteLine("Введена неверная команда.");
+                        break;
+                }
+
+                if (isOpen)
+                {
+                    Console.WriteLine("\nнажмите любую клавшу для продолжения...");
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }*/
+
+            // int[] arr = new int [3];
+            // int[] tempArr = new int [5];
+            // arr = tempArr;
+            // arr[1] = 5;
+            // Console.WriteLine(tempArr[1]);
+            // int[] petrovich = new int [3];
+            // int[] ivanovich = new int [4];
+            // int[] sidorovich;
+            //
+            // petrovich = ivanovich;
+            // petrovich[0] = 5;
+            // ivanovich[1] = 3;
+            // sidorovich = petrovich;
+            // sidorovich[0] = 10;k
+            // Console.WriteLine(petrovich[0]);
+            // Console.WriteLine(petrovich[1]);
+            //
+            // petrovich = new int[10];
+
+            int[] bag = new int [1];
+            bag[0] = 12;
+            int[] tempBag = new int[bag.Length+1];
+            for (int i = 0; i < bag.Length; i++)
+            {
+                tempBag[i] = bag[i];
+                           
+                
             }
-
-
-
+            tempBag[tempBag.Length - 1] = 56;
         }   
     }
 }
