@@ -606,16 +606,86 @@ namespace ConsoleApplication1
             //
             // petrovich = new int[10];
 
-            int[] bag = new int [1];
+            /*int[] bag = new int [1];
             bag[0] = 12;
             int[] tempBag = new int[bag.Length+1];
             for (int i = 0; i < bag.Length; i++)
             {
                 tempBag[i] = bag[i];
-                           
-                
+                Console.WriteLine(bag[i] + "первый");
             }
+
             tempBag[tempBag.Length - 1] = 56;
+            bag = tempBag;
+            for (int i = 0; i < bag.Length; i++)
+            {
+                Console.WriteLine(bag[i] + " второй");
+            }*/
+
+
+            Console.CursorVisible = false;
+            char[,] map =
+            {
+                { '#', '#', '#', '#', '#', '#', '#', '#','#','#','#','#','#','#','#','#' },
+                { '#', ',', '#', ',', ',', ',', ',', ',',',',',',',',',',',',',',',','#' },
+                { '#', ',', '#', ',', ',', ',', ',', ',',',',',',',',',',',',',',',','#' },
+                { '#', ',', '#', ',', ',', ',', ',', ',',',',',',',',',',',',',',',','#' },
+                { '#', ',', '#', ',', ',', ',', ',', ',',',',',',',',',',',',',',',','#' },
+                { '#', ',', ',', ',', ',', ',', ',', '#',',',',',',',',',',',',',',','#' },
+                { '#', ',', '#', ',', ',', ',', ',', '#',',',',',',',',',',',',',',','#' },
+                { '#', ',', '#', ',', ',', ',', ',', '#','#',',',',',',',',',',',',','#' },
+                { '#', ',', '#', ',', ',', ',', ',', ',','#',',',',',',',',',',',',','#' },
+                { '#', ',', '#', ',', ',', ',', ',', ',','#',',',',',',',',',',',',','#' },
+                { '#', '#', '#', '#', '#', '#', '#', '#','#','#','#','#','#','#','#','#' },
+            };
+            int x = 6, y = 6;
+            
+
+                while (true)
+                {
+            Console.SetCursorPosition(0,0);
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    Console.Write(map[i,j]+ " ");
+                }
+                Console.WriteLine();
+                    
+                }
+            Console.SetCursorPosition(x,y);
+            Console.Write('@');
+            ConsoleKeyInfo charKey = Console.ReadKey();
+            switch (charKey.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    if (map[x - 1, y] != '#')
+                    {
+                        x--;
+                    }
+                    break;
+                case ConsoleKey.DownArrow:
+                    if (map[x + 1, y] != '#')
+                    {
+                        x++;
+                    }
+                    break;
+                case ConsoleKey.LeftArrow:
+                    if (map[x, y - 1] != '#')
+                    {
+                        y--;
+                    }
+                    break;
+                case ConsoleKey.RightArrow:
+                    if (map[x, y + 1] != '#')
+                    {
+                        y++;
+                    }
+                    break;
+            }
+            Console.ReadKey();
+            Console.Clear();
+            }
         }   
     }
 }
