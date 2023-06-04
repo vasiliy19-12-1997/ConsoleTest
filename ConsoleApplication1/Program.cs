@@ -714,20 +714,57 @@ namespace ConsoleApplication1
             }
             */
 
-            int[] numbers = { 0, 1, 2, 3,4,5,6,7,8,9 };
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.WriteLine(numbers[i]);
-                
-            }
+            // int[] numbers = { 0, 1, 2, 3,4,5,6,7,8,9 };
+            // for (int i = 0; i < numbers.Length; i++)
+            // {
+            //     Console.WriteLine(numbers[i]);
+            //     
+            // }
+            //
+            // foreach (int number in numbers)
+            // {
+            //     Console.Write(number + " ");
+            // }
+            
+            
+            
+            // ФУНКЦИИ
+            // string userInput = "AAAaaaaa";
+            // userInput.ToLower();
+            
+            // Console.WriteLine("Привет");
+            // Console.WriteLine("Ты здесь?");
+            // WriteError("Нет соединения с интернетом");
+            // Console.WriteLine("Странно...");
+            // WriteError("Интернет не оплачен");
+            
+            
+            
+            int x = 3, y = 11, sum;
+            Random rand = new Random();
+            
+            sum = Sum(rand.Next(0,50) ,rand.Next(50,100));
+            Console.WriteLine(sum);
 
-            foreach (int number in numbers)
-            {
-                Console.Write(number + " ");
-            }
+
+        }
 
 
-
-        }   
+        // private static void WriteError(string text)
+        // {
+        //     ConsoleColor defaultColor = Console.ForegroundColor;
+        //     Console.ForegroundColor = ConsoleColor.Red;
+        //     Console.WriteLine(text);
+        //     Console.ForegroundColor = defaultColor;
+        // }
+        
+        
+        private static int Sum(int x, int y)
+        {
+            int sum = x + y;
+            return sum;
+        }
+        
+        
     }
 }
