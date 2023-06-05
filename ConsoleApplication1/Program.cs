@@ -734,37 +734,133 @@ namespace ConsoleApplication1
             
             // Console.WriteLine("Привет");
             // Console.WriteLine("Ты здесь?");
-            // WriteError("Нет соединения с интернетом");
+            // WriteError("Нет соединения с интернетом", ConsoleColor.Green);
             // Console.WriteLine("Странно...");
-            // WriteError("Интернет не оплачен");
+            // WriteError("Интернет не оплачен", symbol:'@' );
+            //
+            
+            
+            // int x = 3, y = 11, sum;
+            // Random rand = new Random();
+            //
+            // sum = Sum(rand.Next(0,50) ,rand.Next(50,100));
+            // Console.WriteLine(sum);
             
             
             
-            int x = 3, y = 11, sum;
-            Random rand = new Random();
             
-            sum = Sum(rand.Next(0,50) ,rand.Next(50,100));
-            Console.WriteLine(sum);
+            
+            // int sum, x = 1, y = 10;
+            // Add(out sum, x, y);
+            // Console.WriteLine(sum);
 
+
+            // int[] arr = new int[5];
+            // arr =  EditArray(arr, 2, 10);
+            // Console.WriteLine(arr[2]);
+
+
+            // int[] arr1 = new int[5];
+            // int[,] arr2 = new int[5,5];
+            // arr1 = Resize(arr1, 6);
+            // arr2 = Resize2(arr2, 10,10);
+            // Console.WriteLine(arr1.Length);
+            // Console.WriteLine(arr2.Length);
+
+
+            int health = 5, maxHealth = 10;
+            int mana = 7, maxMana = 10;
+            while (true)
+            {
+            DrawBar(health, maxHealth, ConsoleColor.Green, 0, '|');
+            DrawBar(mana, maxMana, ConsoleColor.Blue, 1);
+            
+            Console.SetCursorPosition(0,5);
+            Console.Write("Введите число на которое изменится жизнь");
+            health += Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите число на которое изменится мана");
+            mana += Convert.ToInt32(Console.ReadLine());
+            Console.ReadKey();
+            Console.Clear();
+            }
 
         }
 
 
-        // private static void WriteError(string text)
+        // private static void WriteError(string text, ConsoleColor color= ConsoleColor.Red, char symbol = '!')
         // {
         //     ConsoleColor defaultColor = Console.ForegroundColor;
-        //     Console.ForegroundColor = ConsoleColor.Red;
-        //     Console.WriteLine(text);
+        //     Console.ForegroundColor = color;
+        //     Console.WriteLine(symbol + text);
         //     Console.ForegroundColor = defaultColor;
         // }
         
         
-        private static int Sum(int x, int y)
-        {
-            int sum = x + y;
-            return sum;
-        }
+        // private static int Sum(int x, int y)
+        // {
+        //     int sum = x + y;
+        //     return sum;
+        // }
+
+
+        // private static int[] EditArray(int [] arr, int index, int value)
+        // {
+        //     arr = new int[6];
+        //     arr[index] = value;
+        //     return arr;
+        // }
         
+        
+        /*private static int[] Resize(int[] arr, int size)
+        {
+            int[] cashArray = new int[size];
+            
+            for (int i = 0; i < arr.Length; i++)
+            {
+                cashArray[i] = arr[i];
+            }
+
+            arr = cashArray;
+            return arr;
+        }
+
+        private static int[,] Resize2(int[,] arr, int x, int y)
+        {
+            int[,] cashArray = new int[x, y];
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    cashArray[i, j] = arr[i, j];
+                }
+            }
+
+            arr = cashArray;
+            return arr;
+        }*/
+
+        static void DrawBar(int value, int maxValue, ConsoleColor color, int position, char symbol ='_')
+        {
+            ConsoleColor defaultColot = Console.BackgroundColor;
+            string bar = "";
+
+            for (int i = 0; i < value; i++)
+            {
+                bar += symbol;
+            }
+            Console.SetCursorPosition(0,position);
+            Console.Write('[');
+            Console.BackgroundColor = color;
+            Console.Write(bar);
+            Console.BackgroundColor = defaultColot;
+            bar = "";
+
+            for (int i = value; i < maxValue; i++)
+            {
+                bar += symbol;
+            }
+            Console.Write(bar + ']');
+        }
         
     }
 }
