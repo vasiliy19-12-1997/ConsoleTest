@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
 using System.IO;
+using System.Threading;
 
 namespace ConsoleApplication1
 {
@@ -786,8 +788,74 @@ namespace ConsoleApplication1
             Console.Clear();
             }*/
 
-            char[,] map = ReadMap("map.txt");
-            DrawMap(map);
+            // char[,] map = ReadMap("map.txt");
+            // DrawMap(map);
+            // Console.ReadKey();
+            // while (true)
+            // { 
+            //     Console.Clear();
+            //     DrawMap(map);
+            //     Console.SetCursorPosition(1,1);
+            //     Console.Write("@");
+            //     Thread.Sleep(1000);
+            //     
+            // }
+            
+            
+            //LIST коллекция
+            /*
+            List<int> numbers = new List<int>();
+            
+            numbers.Add(50);
+            numbers.Add(5);
+            numbers.Add(40);
+            numbers.Add(22);
+            numbers.Add(10);
+            
+            numbers.AddRange(new int[]{3,10,50,60});
+            
+            // numbers.RemoveAt(5);
+            // numbers.Remove(5);
+            //
+            // numbers.Clear();
+            // Console.WriteLine($"Число 50 находится на позиции {numbers.IndexOf(50)+1}");
+            numbers.Insert(1,123);
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+            */
+            
+            //Queue
+            // Queue<string> pasengers = new Queue<string>();
+            // pasengers.Enqueue("Василий");
+            // pasengers.Enqueue("Алексей");
+            // pasengers.Enqueue("Алиса");
+            // pasengers.Enqueue("Мария");
+            // Console.WriteLine($"Сейчас на рейс заходит {pasengers.Dequeue()}");
+            // Console.WriteLine($"Следующий в очереди {pasengers.Peek()}"); 
+            // foreach (var passenger in pasengers)
+            // {   
+            //     Console.WriteLine(passenger);
+            // }
+
+            Stack<int> numbers = new Stack<int>();
+            numbers.Push(1);
+            numbers.Push(2);
+            numbers.Push(3);
+            numbers.Push(4);
+            numbers.Push(5);
+            // Console.WriteLine(numbers.Peek());
+            // numbers.Pop();
+            foreach (var num in numbers)
+            {
+                Console.WriteLine(numbers);
+            }
+            while (numbers.Count > 0)
+            {
+                Console.WriteLine($"Следующее число в стеке{numbers.Pop()}");
+            }
+
 
 
 
@@ -796,33 +864,30 @@ namespace ConsoleApplication1
 
         }
 
-        private static void DrawMap(char[,] map)
+        /*private static void DrawMap(char[,] map)
         { 
-            for (int y = 0; y < map.GetLength(1); y++)
-                for (int x = 0; x < map.GetLength(0); x++)
+            for (int y = 0; y < map.GetLength(0); y++)
+                for (int x = 0; x < map.GetLength(1); x++)
                 { 
-                    Console.Write(map[x,y]);
-                }
-
+                    Console.Write(map[y,x]);
+                } 
             Console.Write("\n");
-                
         }
         private static char[,] ReadMap(string path)
         {
             
             string []file  = File.ReadAllLines(path);
-            char[,] map = new char[GetMaxLengthOfRow(file), file.Length];
+            char[,] map = new char[file.Length, GetMaxLengthOfRow(file)];
 
-            for (int x = 0; x < map.GetLength(0); x++)
+            for (int y = 0; y < map.GetLength(0); y++)
+                for (int x = 0; x < map.GetLength(1); x++)
             {
-                for (int y = 0; y < map.GetLength(1); y++)
                 {
-                    map[x, y] = file[y][x];
+                    map[y, x] = file[y][x];
                 }
             }
             return map;
-
-        }
+            }
 
         private static int GetMaxLengthOfRow(string[] lines)
         {
@@ -833,7 +898,7 @@ namespace ConsoleApplication1
                     maxLength = line.Length;
             }
             return maxLength;
-        }
+        }*/
 
         // private static void WriteError(string text, ConsoleColor color= ConsoleColor.Red, char symbol = '!')
         // {
