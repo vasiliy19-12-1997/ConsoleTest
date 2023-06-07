@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
+using System.IO;
 
 namespace ConsoleApplication1
 {
@@ -768,7 +770,7 @@ namespace ConsoleApplication1
             // Console.WriteLine(arr2.Length);
 
 
-            int health = 5, maxHealth = 10;
+            /*int health = 5, maxHealth = 10;
             int mana = 7, maxMana = 10;
             while (true)
             {
@@ -782,10 +784,56 @@ namespace ConsoleApplication1
             mana += Convert.ToInt32(Console.ReadLine());
             Console.ReadKey();
             Console.Clear();
-            }
+            }*/
+
+            char[,] map = ReadMap("map.txt");
+            DrawMap(map);
+
+
+
+
+
 
         }
 
+        private static void DrawMap(char[,] map)
+        { 
+            for (int y = 0; y < map.GetLength(1); y++)
+                for (int x = 0; x < map.GetLength(0); x++)
+                { 
+                    Console.Write(map[x,y]);
+                }
+
+            Console.Write("\n");
+                
+        }
+        private static char[,] ReadMap(string path)
+        {
+            
+            string []file  = File.ReadAllLines(path);
+            char[,] map = new char[GetMaxLengthOfRow(file), file.Length];
+
+            for (int x = 0; x < map.GetLength(0); x++)
+            {
+                for (int y = 0; y < map.GetLength(1); y++)
+                {
+                    map[x, y] = file[y][x];
+                }
+            }
+            return map;
+
+        }
+
+        private static int GetMaxLengthOfRow(string[] lines)
+        {
+            int maxLength = lines[0].Length;
+            foreach (var line in lines)
+            {
+                if (lines.Length > maxLength)
+                    maxLength = line.Length;
+            }
+            return maxLength;
+        }
 
         // private static void WriteError(string text, ConsoleColor color= ConsoleColor.Red, char symbol = '!')
         // {
@@ -838,12 +886,15 @@ namespace ConsoleApplication1
             arr = cashArray;
             return arr;
         }*/
+        
+        
+        
 
-        static void DrawBar(int value, int maxValue, ConsoleColor color, int position, char symbol ='_')
+        /*static void DrawBar(int value, int maxValue, ConsoleColor color, int position, char symbol ='_')
         {
             ConsoleColor defaultColot = Console.BackgroundColor;
             string bar = "";
-
+        
             for (int i = 0; i < value; i++)
             {
                 bar += symbol;
@@ -854,13 +905,14 @@ namespace ConsoleApplication1
             Console.Write(bar);
             Console.BackgroundColor = defaultColot;
             bar = "";
-
+        
             for (int i = value; i < maxValue; i++)
             {
                 bar += symbol;
             }
             Console.Write(bar + ']');
-        }
+        }*/
+        
         
     }
 }
