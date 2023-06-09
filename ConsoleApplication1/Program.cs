@@ -4,6 +4,7 @@ using System.Net;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
 namespace ConsoleApplication1
@@ -873,17 +874,10 @@ namespace ConsoleApplication1
             
             
             //class 
-            Car ferrary = new Car();
-            ferrary.Name = "Lada";
-            ferrary.HorsePower = 500;
-            ferrary.Age = 2020;
-            ferrary.MaxSpead = 5000;
-            Car lada;
-            lada = ferrary;
-            lada.Age = 2019;
-            Console.WriteLine(ferrary.Age);
-            
-
+            Car ferrary = new Car("F40", -100, 500, 500);
+          
+            ferrary.ShowTechnicalPassport();
+           
 
 
 
@@ -1024,5 +1018,41 @@ namespace ConsoleApplication1
         public int HorsePower;
         public int Age;
         public float MaxSpead;
+
+        
+        public Car(string name, int horsePower, int age, float maxSpeed)
+        {
+            if (horsePower < 0)
+            {
+                HorsePower = 1;
+            }
+            else
+            {
+                HorsePower = horsePower;
+            }
+            Name = name;
+            Age = age;
+            MaxSpead = maxSpeed;
+            
+        }
+
+        public Car()
+        {
+            Name = "LAda";
+            HorsePower = 5000;
+            Age = 10000;
+            MaxSpead = 10000.5f;
+        }
+        public void ShowTechnicalPassport()
+        {
+            Console.WriteLine($"Название авто: {Name}\nКоличество лош сил:{HorsePower}\n" +
+                              $"Возраст лет: {Age}\nМаксимальная скорость: {MaxSpead}");
+        }
+
+        public void BecomeOlder(int years, int runAwayHorses)
+        {
+            Age += years;
+            HorsePower -= runAwayHorses;
+        }
     }
 }
