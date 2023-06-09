@@ -839,7 +839,9 @@ namespace ConsoleApplication1
             //     Console.WriteLine(passenger);
             // }
 
-            Stack<int> numbers = new Stack<int>();
+            
+            //Stack коллекция
+            /*Stack<int> numbers = new Stack<int>();
             numbers.Push(1);
             numbers.Push(2);
             numbers.Push(3);
@@ -854,7 +856,42 @@ namespace ConsoleApplication1
             while (numbers.Count > 0)
             {
                 Console.WriteLine($"Следующее число в стеке{numbers.Pop()}");
+            }*/
+            
+            //Dictionary
+            /*
+            Dictionary<string, string> countriesCapitals = new Dictionary<string, string>();
+            countriesCapitals.Add("Австралия", "Канберра");
+            countriesCapitals.Add("Россия", "Турция");
+            countriesCapitals.Add("Америка", "Новая Зеландия");
+            countriesCapitals.Remove("Россия");
+            foreach (var value in countriesCapitals.Values)
+            {
+                Console.WriteLine($" столица- {value}");
             }
+            */
+            
+            
+            //class 
+            Car ferrary = new Car();
+            ferrary.Name = "Lada";
+            ferrary.HorsePower = 500;
+            ferrary.Age = 2020;
+            ferrary.MaxSpead = 5000;
+            Car lada;
+            lada = ferrary;
+            lada.Age = 2019;
+            Console.WriteLine(ferrary.Age);
+            
+
+
+
+
+
+
+
+
+
 
 
 
@@ -979,5 +1016,13 @@ namespace ConsoleApplication1
         }*/
         
         
+    }
+
+    class Car
+    {
+        public string Name;
+        public int HorsePower;
+        public int Age;
+        public float MaxSpead;
     }
 }
