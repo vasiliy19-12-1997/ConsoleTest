@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Formatters;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
@@ -53,7 +54,7 @@ namespace ConsoleApplication1
 
             // int result = 5 + (12 - 5) * 3 - 1 + 5 * 2;
             // Console.WriteLine((result));
-            
+
             // bool accesAge;
             // accesAge = 5!=4;
             // Console.WriteLine(accesAge);
@@ -77,9 +78,9 @@ namespace ConsoleApplication1
             // Console.WriteLine(reconvert);
             // Console.WriteLine();
             // Console.ReadLine();
-            
+
             //работа с консолью
-            
+
             // string name;
             // Console.Write("enter your name ");
             // name = Console.ReadLine();
@@ -92,7 +93,7 @@ namespace ConsoleApplication1
             // int A = 0;
             // //                   1   + 2 + 1           1 + "1"  3*2   
             // Console.WriteLine((++A) + 2 + 1 + (A++) + "1" +  (++A)*2);
-            
+
             //  gameOfThrones
             /*
             float health;
@@ -112,8 +113,8 @@ namespace ConsoleApplication1
             health -= Convert.ToSingle(demage)/ precentConventer*armor;
             Console.WriteLine($"Your hit damage: {demage}, You have health: {health}, your armor is {armor}");
             */
-            
-           
+
+
             // store
             /*
             int money;
@@ -131,7 +132,7 @@ namespace ConsoleApplication1
             Console.WriteLine($"you have{food} and coins: {money}");
             */
 
-            
+
             //&&
             // int money = 500;
             // int level = 500;
@@ -177,10 +178,10 @@ namespace ConsoleApplication1
                     Console.WriteLine("Я такого дня не знаю");
              break;
             }*/
-            
-            
-            
-            
+
+
+
+
             // if (dayOfWeek == "Понедельник")
             // {
             //     Console.WriteLine("Проходим курсы");
@@ -203,8 +204,8 @@ namespace ConsoleApplication1
             // {
             //     Console.WriteLine("block");
             // }
-            
-            
+
+
             /*
             float rublesInWallet;
             float dollarsInWallet;
@@ -273,7 +274,7 @@ namespace ConsoleApplication1
             //     }
             //     Console.WriteLine(age);
             // }
-            
+
             // int age;
             // Console.WriteLine("enter your age");
             // age = Convert.ToInt32(Console.ReadLine());
@@ -286,7 +287,7 @@ namespace ConsoleApplication1
             //     Console.WriteLine($"happy birthday {i}");
             // }
 
-        
+
             /*int tryCount =5;
             string password = "127571";
             string userInput;
@@ -370,8 +371,8 @@ namespace ConsoleApplication1
 
             if (triesCount >= 0) return;
             Console.WriteLine($" вы проиграли, это было число:{number}");*/
-            
-            
+
+
             /*Random rand = new Random();
             float health1  = rand.Next(90, 100);
             int demage1= rand.Next(5, 20);
@@ -445,8 +446,8 @@ namespace ConsoleApplication1
             
             Console.WriteLine(maxValue);*/
 
-            
-            
+
+
             /*int[] sectors = { 6, 28, 15, 15, 17 };
             bool isOpen = true;
             while (isOpen)
@@ -499,8 +500,8 @@ namespace ConsoleApplication1
                 Console.Clear();
             }*/
 
-            
-            
+
+
             /*int[,] arr3 = new int[15, 25];
             Random rand = new Random();
             for (int i = 0; i < arr3.GetLength(0); i++)
@@ -515,10 +516,10 @@ namespace ConsoleApplication1
                 Console.WriteLine();
             }*/
 
-            
-            
-            
-            
+
+
+
+
             /*// БИБЛИОТЕКА
             string[,] books =
             {
@@ -628,10 +629,10 @@ namespace ConsoleApplication1
             }*/
 
 
- 
-            
-            
-            
+
+
+
+
             /*
             Console.CursorVisible = false;
             char[,] map =
@@ -730,31 +731,31 @@ namespace ConsoleApplication1
             // {
             //     Console.Write(number + " ");
             // }
-            
-            
-            
+
+
+
             // ФУНКЦИИ
             // string userInput = "AAAaaaaa";
             // userInput.ToLower();
-            
+
             // Console.WriteLine("Привет");
             // Console.WriteLine("Ты здесь?");
             // WriteError("Нет соединения с интернетом", ConsoleColor.Green);
             // Console.WriteLine("Странно...");
             // WriteError("Интернет не оплачен", symbol:'@' );
             //
-            
-            
+
+
             // int x = 3, y = 11, sum;
             // Random rand = new Random();
             //
             // sum = Sum(rand.Next(0,50) ,rand.Next(50,100));
             // Console.WriteLine(sum);
-            
-            
-            
-            
-            
+
+
+
+
+
             // int sum, x = 1, y = 10;
             // Add(out sum, x, y);
             // Console.WriteLine(sum);
@@ -801,8 +802,8 @@ namespace ConsoleApplication1
             //     Thread.Sleep(1000);
             //     
             // }
-            
-            
+
+
             //LIST коллекция
             /*
             List<int> numbers = new List<int>();
@@ -826,7 +827,7 @@ namespace ConsoleApplication1
                 Console.WriteLine(numbers[i]);
             }
             */
-            
+
             //Queue
             // Queue<string> pasengers = new Queue<string>();
             // pasengers.Enqueue("Василий");
@@ -840,7 +841,7 @@ namespace ConsoleApplication1
             //     Console.WriteLine(passenger);
             // }
 
-            
+
             //Stack коллекция
             /*Stack<int> numbers = new Stack<int>();
             numbers.Push(1);
@@ -858,7 +859,7 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine($"Следующее число в стеке{numbers.Pop()}");
             }*/
-            
+
             //Dictionary
             /*
             Dictionary<string, string> countriesCapitals = new Dictionary<string, string>();
@@ -871,13 +872,62 @@ namespace ConsoleApplication1
                 Console.WriteLine($" столица- {value}");
             }
             */
-            
-            
+
+
             //class 
-            Car ferrary = new Car("F40", -100, 500, 500);
-          
-            ferrary.ShowTechnicalPassport();
-           
+            // Car ferrary = new Car("F40", -100, 500, 500);
+            //
+            // ferrary.ShowTechnicalPassport();
+            
+            
+            /*bool isOpen = true;
+            Table[] tables = { new Table(1, 4), new Table(2, 5) };
+            while (isOpen)
+            {
+            for (int i = 0; i < tables.Length; i++)
+            {
+                tables[i].ShowInfo();
+            }
+                Console.WriteLine("Введите номер стола для брони");
+                int wishTables = Convert.ToInt32(Console.ReadLine())-1;
+                Console.WriteLine("Введите кол-во столов для брони");
+                int tablesValue = Convert.ToInt32(Console.ReadLine());
+                bool isDesireSucces = tables[wishTables].ReserveTables(tablesValue);
+                if (isDesireSucces)
+                {
+                    Console.WriteLine($"Бронь прошла успешно");
+                }
+                else
+                {
+                    Console.WriteLine($"Бронь не прошла");
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }*/
+
+
+            // Performer worker1 = new Performer("Василий");
+            // Performer worker2 = new Performer("Василий2");
+            //
+            // Task[] tasks = { new Task(worker1, "выкопать яму"), new Task(worker2, "написать код, чтобы выкопать яму" )};
+            //
+            // Board schedule = new Board(tasks);
+            //
+            // schedule.ShowAllTasks();
+
+
+
+            Knight war1 = new Knight(100, 500, 500);
+            Pirat war2 = new Pirat(100, 1000, 100, 100);
+                
+            war1.TakeDamage(500);
+            war2.TakeDamage(250);
+            Console.Write("рыцарь: ");
+            war1.ShowInfo();
+            Console.Write("пират: ");
+            war2.ShowInfo();
+            
+
 
 
 
@@ -938,8 +988,8 @@ namespace ConsoleApplication1
         //     Console.WriteLine(symbol + text);
         //     Console.ForegroundColor = defaultColor;
         // }
-        
-        
+
+
         // private static int Sum(int x, int y)
         // {
         //     int sum = x + y;
@@ -953,8 +1003,8 @@ namespace ConsoleApplication1
         //     arr[index] = value;
         //     return arr;
         // }
-        
-        
+
+
         /*private static int[] Resize(int[] arr, int size)
         {
             int[] cashArray = new int[size];
@@ -982,9 +1032,9 @@ namespace ConsoleApplication1
             arr = cashArray;
             return arr;
         }*/
-        
-        
-        
+
+
+
 
         /*static void DrawBar(int value, int maxValue, ConsoleColor color, int position, char symbol ='_')
         {
@@ -1008,11 +1058,11 @@ namespace ConsoleApplication1
             }
             Console.Write(bar + ']');
         }*/
-        
-        
+
+
     }
 
-    class Car
+    /*class Car
     {
         public string Name;
         public int HorsePower;
@@ -1053,6 +1103,133 @@ namespace ConsoleApplication1
         {
             Age += years;
             HorsePower -= runAwayHorses;
+        }
+    }*/
+    
+    
+    //кафе
+    /*class Table 
+    {
+        public int Number;
+        public int MaxPlaces;
+        public int FreePlaces;
+
+        public Table(int number, int maxPlaces)
+        {
+            Number = number;
+            MaxPlaces = maxPlaces;
+            FreePlaces = maxPlaces;
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Стол:{Number}. Свободно мест:{FreePlaces} из {MaxPlaces}");
+        }
+
+        public bool ReserveTables(int places)
+        {
+            if (MaxPlaces >= places)
+            {
+                FreePlaces -= places;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        
+    }*/
+    
+    
+    /*class Performer
+    {
+        public string Name;
+
+        public Performer(string name)
+        {
+            Name = name;
+        }
+    }
+
+    class Board
+    {
+        public Task[] Tasks;
+
+        public Board(Task[] tasks)
+        {
+            Tasks = tasks;
+        }
+
+        public void ShowAllTasks()
+        {
+            for (int i = 0; i < Tasks.Length; i++)
+            {
+                Tasks[i].ShowInfo();
+            }
+        }
+    }
+
+    class Task
+    {
+        public Performer Worker;
+        public string Description;
+
+        public Task(Performer worker, string description)
+        {
+            Worker = worker;
+            Description = description;
+        }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Ответсвенный: {Worker.Name}\nОписание задачи: {Description}");
+        }
+    }*/
+
+    class Warrior
+    {
+        protected int Health;
+        protected int Armor;
+        protected int Demage;
+
+        public Warrior(int health, int armor, int demage)
+        {
+            Health = health;
+            Armor = armor;
+            Demage = demage;
+        }
+        public void TakeDamage(int demage)
+        {
+            Health -= demage - Armor;
+        }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine(Health);
+        }
+        
+    }
+    class Knight:Warrior
+    {
+        public Knight(int health, int armor, int demage):base(health, armor, demage) { }
+
+        public void Pray()
+        {
+            Armor += 2;
+        }
+    }
+
+    class Pirat:Warrior
+    {
+        public int AttackSpead;
+        public Pirat(int health, int armor, int demage, int attackSpead):base(health, 5, demage* attackSpead){}
+        
+
+        public void Slole()
+        {
+            Armor -= 2;
+            Health += 10;
         }
     }
 }
