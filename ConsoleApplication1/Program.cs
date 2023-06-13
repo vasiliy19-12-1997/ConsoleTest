@@ -15,34 +15,50 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-    Behaviour[] behaviours = 
-
-        }
-
-    class Behaviour
-    {
-        public virtual void Update()
-        {
-
-        }
-
-        class Walker : Behaviour
-        {
-            public override void Update()
+            Behaviour[] behaviours =
             {
-                Console.WriteLine("Иду");
+                new Behaviour.Walker(),
+                new Behaviour.Jumper(),
+
+            };
+            while (true)
+            {
+                foreach (var behaviour in behaviours)
+                {
+                    behaviour.Update();
+                    System.Threading.Thread.Sleep(1000);
+                }
             }
+
         }
 
-        class Jumper : Behaviour
+        class Behaviour
         {
-            public override void Update()
+            public virtual void Update()
             {
-                Console.WriteLine("Прыгаю");
 
+            }
+
+            internal class Walker : Behaviour
+            {
+                public override void Update()
+                {
+                    Console.WriteLine("Иду");
+                }
+            }
+
+            internal class Jumper : Behaviour
+            {
+                public override void Update()
+                {
+                    Console.WriteLine("Прыгаю");
+
+                }
             }
         }
     }
+
+    
 }
 
 
